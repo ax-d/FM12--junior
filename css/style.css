@@ -21,6 +21,7 @@
   font-size: 1.125rem;
   padding: 0;
   margin: 0;
+  min-width: 375px;
 }
 
 .wrapper {
@@ -72,6 +73,7 @@
 /* start article - hero */
 .hero {
   background: url('../img/bg-header-mobile.png') no-repeat;
+  background-size: 100%;
 }
 
 .wrapper--hero {
@@ -289,6 +291,10 @@
   background: hsl(220, 18%, 97%);
 }
 
+.wrapper {
+  max-width: 1440px;
+}
+
 .img--footer {
   margin: 53px 0 43px 0;
   width: 55px;
@@ -329,12 +335,13 @@
 
 /* end page__footer */
 
-@media only screen and (min-width:1000px) {
+@media only screen and (min-width: 850px) {
 
   /* start main*/
   /* start article - hero */
   .hero {
     background: url('../img/bg-header-desktop.png') no-repeat;
+    background-size: 100%;
   }
 
   .wrapper--hero {
@@ -515,6 +522,10 @@
 
   /* end article - branc-block */
   /* start article - clipboard */
+  .wrapper--clipboard {
+    margin-bottom: 151px;
+  }
+
   .title--clipboard {
     font-size: 2.1875rem;
   }
@@ -522,6 +533,8 @@
   .copy--clipboard {
     font-size: 1.125rem;
     width: 50%;
+    margin-bottom: 50px;
+    line-height: 1.7;
   }
 
   /* end article - clipboard */
@@ -532,10 +545,9 @@
     align-items: flex-start;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 25px 165px 0 165px;
-
+    padding: 43px 165px 0 165px;
   }
-
+  
   .img--footer {
     margin: 0;
   }
@@ -543,14 +555,15 @@
   .menu--footer {
     display: flex;
     flex-wrap: wrap;
-    margin-right: 49px;
+    margin-right: 54px;
     flex: 0 1 54%;
+    margin-top: -1px;
   }
 
   .menu--footer .menu__item {
-    flex: 0 1 31%;
+    flex: 0 1 31.7%;
     text-align: left;
-    margin-bottom: 21px;
+    margin-bottom: 18px;
   }
 
   .menu--footer .menu__link:hover {
@@ -590,6 +603,10 @@
     filter: invert(75%) sepia(54%) saturate(4727%) hue-rotate(125deg) brightness(92%) contrast(77%);
   }
 
+  .menu--social {
+    margin-top: 18px;
+  }
+
   .fm {
     flex-basis: 100%;
   }
@@ -597,6 +614,36 @@
   /* end footer */
 }
 
+@media only screen and (min-width: 850px) and (max-width: 1050px) {
+  /* start article - brand-block */
+  .wrapper--brand-block {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 229px;
+  }
+
+  .img--brand-block {
+    margin: 0 25px 25px 25px;
+  }
+/* end article - brand-block */
+  /* start footer */
+  .wrapper--footer {
+    padding: 25px 80px 0 80px;
+  }
+
+  .menu--footer {
+    margin-right: 0;
+  }
+
+  .menu--footer .menu__item {
+    flex: 0 1 33%;
+  }
+
+  .menu--footer .menu__item:nth-child(5) {
+    text-align: right;
+  }
+}
+/* end footer */
 
 /* start article - snippets */
 /* end article - snippets */
